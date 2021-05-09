@@ -28,7 +28,15 @@ public class User_Registration {
 		} else {
 			System.out.println("Invalid Name\n");
 		}
-		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the email to Check");
+		String email = sc.nextLine();
+		boolean mail = Pattern.matches("^([a-zA-Z]{3,}([+_.-][a-z])*)+@[a-z]+.co[+.in]*$", email);
+		if (mail == true) {
+			System.out.println("Valid Email\n");
+		} else {
+			System.out.println("Invalid Email\n");
+		}
 	}
 
 }
