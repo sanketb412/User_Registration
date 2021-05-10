@@ -53,7 +53,7 @@ public class User_Registration {
 		Scanner ps = new Scanner(System.in);
 		System.out.println("Enter the Password");
 		String pc = ps.nextLine();
-		boolean codepc = Pattern.matches("^((?=.*[a-z])(?=.*[A-Z]).{8,})$", pc);
+		boolean codepc = Pattern.matches("^((?=.*[a-z])(?=.*[A-Z])(?=.*\\d).{8,})$", pc);
 		if (codepc == true) {
 			System.out.println("Valid Password\n");
 		} else {
